@@ -8,12 +8,12 @@ import java.util.Random;
 
 public class Randomizer {
 
-    public static int random_int(int min_range, int max_range) {
+    public int random_int(int min_range, int max_range) {
 
         return new Random().nextInt(max_range + 1 - min_range) + min_range;
     }
 
-    public static String random_string(int length) {
+    public String random_string(int length) {
         String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder sb = new StringBuilder(length);
         Random random = new Random();
@@ -26,7 +26,7 @@ public class Randomizer {
 
     }
 
-    public static void saveToFile(String fileName, Object... args) {
+    public void saveToFile(String fileName, Object... args) {
         try {
             File file = new File(fileName);
             FileWriter writer = new FileWriter(file, true);
